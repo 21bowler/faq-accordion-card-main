@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-softViolet font-kumbh relative flex items-center justify-center h-screen"
+  >
+    <main class="bg-lightGrayishBlue  rounded-xl w-11/12 md:grid grid-cols-2">
+      <div class="absolute">
+        <img src="./images/illustration-woman-online-mobile.svg" alt="">
+      </div>
+      <div>
+        <h1 class="mt-10 text-blue-300 text-center font-bold text-[30px]">
+          FAQ
+        </h1>
+        <div class="p-4 relative border-b border-b-darkGrayishBlue">
+          <h2
+            class="cursor-pointer transition hover:text-SoftRed active:font-bold"
+          >
+            How many team members can I invite?<span
+              class="absolute top-6 right-5 ml-6"
+              ><img src="./images/icon-arrow-down.svg"
+            /></span>
+          </h2>
+          <p class="hidden">
+            You can invite up to 2 additional users on the Free plan. There is
+            no limit on team members for the Premium plan.
+          </p>
+        </div>
+        <div class="p-4 relative border-b border-b-darkGrayishBlue">
+          <h2 class="cursor-pointer transition hover:text-SoftRed">
+            What is the maximum file upload size?<span
+              class="absolute top-6 right-5 ml-6"
+              ><img src="./images/icon-arrow-down.svg"
+            /></span>
+          </h2>
+          <p class="hidden">
+            No more than 2GB. All files in your account must fit your allotted
+            storage space.
+          </p>
+        </div>
+        <div class="p-4 relative border-b border-b-darkGrayishBlue">
+          <h2 class="cursor-pointer hover:text-SoftRed">
+            How do I reset my password?<span class="absolute top-6 right-5 ml-6"
+              ><img src="./images/icon-arrow-down.svg"
+            /></span>
+          </h2>
+          <p class="hidden">
+            Click “Forgot password” from the login page or “Change password”
+            from your profile page. A reset link will be emailed to you.
+          </p>
+        </div>
+        <div class="p-4 relative border-b border-b-darkGrayishBlue">
+          <h2 class="cursor-pointer transition hover:text-SoftRed">
+            Can I cancel my subscription?<span
+              class="absolute top-6 right-5 ml-6"
+              ><img src="./images/icon-arrow-down.svg"
+            /></span>
+          </h2>
+          <p class="hidden">
+            Yes! Send us a message and we’ll process your request no questions
+            asked.
+          </p>
+        </div>
+        <div class="p-4 relative border-b border-b-darkGrayishBlue">
+          <h2 class="cursor-pointer transition-all hover:text-SoftRed">
+            Do you provide additional support?<span
+              class="absolute top-6 right-5 ml-6"
+              ><img src="./images/icon-arrow-down.svg"
+            /></span>
+          </h2>
+          <p class="hidden">
+            Chat and email support is available 24/7. Phone lines are open
+            during normal business hours.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
