@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script defer src="./script.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | FAQ Accordion Card</title>
 
@@ -26,76 +27,157 @@
     </style>
   </head>
   <body
-    class="bg-softViolet font-kumbh relative flex items-center justify-center h-screen"
+    class="bg-softViolet font-kumbh flex items-center justify-center h-screen"
   >
-    <main class="bg-lightGrayishBlue  rounded-xl w-11/12 md:grid grid-cols-2">
-      <div class="absolute">
-        <img src="./images/illustration-woman-online-mobile.svg" alt="">
+    <main
+      class="bg-lightGrayishBlue bg-desktop-img bg-no-repeat bg-left-bottom rounded-xl  md:grid grid-cols-2 w-[920px]"
+    >
+      <!-- Image wrapper-->
+      <div class="relative md:bg-center">
+        <picture>
+          <source
+            media="(min-width: )"
+            srcset="./images/illustration-woman-online-mobile.svg"
+          />
+          <img src="./images/illustration-woman-online-desktop.svg"  />
+        </picture>
       </div>
+      <!-- Accordion wrapper -->
       <div>
         <h1 class="mt-10 text-blue-300 text-center font-bold text-[30px]">
           FAQ
         </h1>
-        <div class="p-4 relative border-b border-b-darkGrayishBlue">
-          <h2
-            class="cursor-pointer transition hover:text-SoftRed active:font-bold"
-          >
-            How many team members can I invite?<span
-              class="absolute top-6 right-5 ml-6"
-              ><img src="./images/icon-arrow-down.svg"
-            /></span>
-          </h2>
-          <p class="hidden">
-            You can invite up to 2 additional users on the Free plan. There is
-            no limit on team members for the Premium plan.
-          </p>
+        <!-- first -->
+        <div class="p-4 relative">
+          <div class="accordion-question">
+            <div
+              class="question-answer__accordion border-b border-b-darkGrayishBlue"
+            >
+              <div class="question cursor-pointer flex justify-between ">
+                <h2
+                  class="heading transition hover:text-SoftRed active:font-bold"
+                >
+                  How many team members can I invite?
+                </h2>
+
+                <img class="self-center active:rotate-180" src="./images/icon-arrow-down.svg" />
+              </div>
+              <!-- answer -->
+              <div class="answer hidden">
+                <p>
+                  You can invite up to 2 additional users on the Free plan.
+                  There is no limit on team members for the Premium plan.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="p-4 relative border-b border-b-darkGrayishBlue">
-          <h2 class="cursor-pointer transition hover:text-SoftRed">
-            What is the maximum file upload size?<span
-              class="absolute top-6 right-5 ml-6"
-              ><img src="./images/icon-arrow-down.svg"
-            /></span>
-          </h2>
-          <p class="hidden">
-            No more than 2GB. All files in your account must fit your allotted
-            storage space.
-          </p>
+
+        <!-- secondNew -->
+        <div class="p-4 relative">
+          <div class="accordion-question">
+            <div
+              class="question-answer__accordion border-b border-b-darkGrayishBlue"
+            >
+              <div class="question cursor-pointer flex justify-between">
+                <h2
+                  class="heading cursor-pointer transition hover:text-SoftRed active:font-bold"
+                >
+                  What is the maximum file upload size?
+                </h2>
+
+                <img class="self-center" src="./images/icon-arrow-down.svg" />
+              </div>
+              <!-- answer -->
+              <div class="answer hidden">
+                <p>
+                  No more than 2GB. All files in your account must fit your
+                  allotted storage space.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="p-4 relative border-b border-b-darkGrayishBlue">
-          <h2 class="cursor-pointer hover:text-SoftRed">
-            How do I reset my password?<span class="absolute top-6 right-5 ml-6"
-              ><img src="./images/icon-arrow-down.svg"
-            /></span>
-          </h2>
-          <p class="hidden">
-            Click “Forgot password” from the login page or “Change password”
-            from your profile page. A reset link will be emailed to you.
-          </p>
+
+        <!-- Third new -->
+        <div class="p-4 relative">
+          <div class="accordion-question">
+            <div
+              class="question-answer__accordion border-b border-b-darkGrayishBlue"
+            >
+              <div class="question cursor-pointer flex justify-between">
+                <h2
+                  class="heading cursor-pointer transition hover:text-SoftRed active:font-bold"
+                >
+                  How do I reset my password?
+                </h2>
+
+                <img class="self-center" src="./images/icon-arrow-down.svg" />
+              </div>
+              <!-- answer -->
+              <div class="answer hidden">
+                <p>
+                  Click “Forgot password” from the login page or “Change
+                  password” from your profile page. A reset link will be emailed
+                  to you.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="p-4 relative border-b border-b-darkGrayishBlue">
-          <h2 class="cursor-pointer transition hover:text-SoftRed">
-            Can I cancel my subscription?<span
-              class="absolute top-6 right-5 ml-6"
-              ><img src="./images/icon-arrow-down.svg"
-            /></span>
-          </h2>
-          <p class="hidden">
-            Yes! Send us a message and we’ll process your request no questions
-            asked.
-          </p>
+
+        <!-- forth new -->
+        <div class="p-4 relative">
+          <div class="accordion-question">
+            <div
+              class="question-answer__accordion border-b border-b-darkGrayishBlue"
+            >
+              <div class="question cursor-pointer flex justify-between">
+                <h2
+                  class="heading cursor-pointer transition hover:text-SoftRed active:font-bold"
+                >
+                  Can I cancel my subscription?
+                </h2>
+
+                <img class="self-center" src="./images/icon-arrow-down.svg" />
+              </div>
+              <!-- answer -->
+              <div class="answer hidden">
+                <p>
+                  Yes! Send us a message and we’ll process your request no
+                  questions asked.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="p-4 relative border-b border-b-darkGrayishBlue">
-          <h2 class="cursor-pointer transition-all hover:text-SoftRed">
-            Do you provide additional support?<span
-              class="absolute top-6 right-5 ml-6"
-              ><img src="./images/icon-arrow-down.svg"
-            /></span>
-          </h2>
-          <p class="hidden">
-            Chat and email support is available 24/7. Phone lines are open
-            during normal business hours.
-          </p>
+
+        <!-- fifthnew -->
+        <div class="p-4 relative">
+          <div class="accordion-question">
+            <div
+              class="question-answer__accordion border-b border-b-darkGrayishBlue"
+            >
+              <div
+                class="question cursor-pointer transition-all flex justify-between"
+              >
+                <h2
+                  class="heading cursor-pointer hover:text-SoftRed active:font-bold"
+                >
+                  Do you provide additional support?
+                </h2>
+
+                <img class="self-center" src="./images/icon-arrow-down.svg" />
+              </div>
+              <!-- answer -->
+              <div class="answer hidden">
+                <p>
+                  Chat and email support is available 24/7. Phone lines are open
+                  during normal business hours.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
