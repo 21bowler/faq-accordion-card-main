@@ -24,22 +24,40 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      /*  */
+      .answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: ease 200ms;
+      }
+      .accordion-question:is(.active) img.image-icon-down{
+        transform: rotate(180deg);
+      }
+      @media screen and (min-width: 768px){
+        .woman-illustration {
+          position: absolute;
+
+        }
+      }
+
+
     </style>
   </head>
   <body
-    class="bg-softViolet font-kumbh flex items-center justify-center h-screen"
+    class="bg-softViolet relative font-kumbh flex items-center justify-center h-screen"
   >
     <main
-      class="bg-lightGrayishBlue bg-desktop-img bg-no-repeat bg-left-bottom rounded-xl  md:grid grid-cols-2 w-[920px]"
+      class="bg-lightGrayishBlue bg-desktop-img bg-no-repeat bg-left-bottom rounded-xl md:grid grid-cols-2 w-[920px]"
     >
       <!-- Image wrapper-->
       <div class="relative md:bg-center">
         <picture>
           <source
-            media="(min-width: )"
+            media="(min-width: 768)"
             srcset="./images/illustration-woman-online-mobile.svg"
+            class="woman-illustration"
           />
-          <img src="./images/illustration-woman-online-desktop.svg"  />
+          <img src="./images/illustration-woman-online-desktop.svg" />
         </picture>
       </div>
       <!-- Accordion wrapper -->
@@ -53,17 +71,20 @@
             <div
               class="question-answer__accordion border-b border-b-darkGrayishBlue"
             >
-              <div class="question cursor-pointer flex justify-between ">
+              <div class="question cursor-pointer flex justify-between">
                 <h2
                   class="heading transition hover:text-SoftRed active:font-bold"
                 >
                   How many team members can I invite?
                 </h2>
 
-                <img class="self-center active:rotate-180" src="./images/icon-arrow-down.svg" />
+                <img
+                  class="self-center img-icon-down"
+                  src="./images/icon-arrow-down.svg"
+                />
               </div>
               <!-- answer -->
-              <div class="answer hidden">
+              <div class="answer max-h-max">
                 <p>
                   You can invite up to 2 additional users on the Free plan.
                   There is no limit on team members for the Premium plan.
@@ -89,7 +110,7 @@
                 <img class="self-center" src="./images/icon-arrow-down.svg" />
               </div>
               <!-- answer -->
-              <div class="answer hidden">
+              <div class="answer max-h-max">
                 <p>
                   No more than 2GB. All files in your account must fit your
                   allotted storage space.
@@ -101,7 +122,7 @@
 
         <!-- Third new -->
         <div class="p-4 relative">
-          <div class="accordion-question">
+          <div class="accordion-question active">
             <div
               class="question-answer__accordion border-b border-b-darkGrayishBlue"
             >
@@ -115,7 +136,7 @@
                 <img class="self-center" src="./images/icon-arrow-down.svg" />
               </div>
               <!-- answer -->
-              <div class="answer hidden">
+              <div class="answer max-h-max">
                 <p>
                   Click “Forgot password” from the login page or “Change
                   password” from your profile page. A reset link will be emailed
@@ -142,7 +163,7 @@
                 <img class="self-center" src="./images/icon-arrow-down.svg" />
               </div>
               <!-- answer -->
-              <div class="answer hidden">
+              <div class="answer max-h-max">
                 <p>
                   Yes! Send us a message and we’ll process your request no
                   questions asked.
@@ -170,7 +191,7 @@
                 <img class="self-center" src="./images/icon-arrow-down.svg" />
               </div>
               <!-- answer -->
-              <div class="answer hidden">
+              <div class="answer max-h-max">
                 <p>
                   Chat and email support is available 24/7. Phone lines are open
                   during normal business hours.

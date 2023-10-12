@@ -1,19 +1,18 @@
-const quiz = document.querySelectorAll(".question");
-console.log(quiz);
-const paragraph = document.querySelectorAll(".hidden");
-console.log(paragraph);
+const questions = document.querySelectorAll(".accordion-question");
 
-const showParagraphh = function () {
-  paragraph.forEach((p) => {
-    p.classList.toggle("hidden");
+questions.forEach((question) => {
+  question.addEventListener("click", (e) => {
+    const clicked = e.target.closest(".accordion-question");
+    const answer = clicked.querySelector(".answer");
+    const clickedActive = clicked.classList.contains("active");
+    clicked.classList.toggle("active");
+    if (clickedActive) {
+      answer.style.maxHeight = null;
+    } else {
+      const scrollHeight = answer.scrollHeight;
+      answer.style.maxHeight = `${scrollHeight}px`;
+    }
   });
-};
+});
 
-quiz.forEach((q) => q.addEventListener("click", showParagraphh));
-
-// if (q.parentNode.classList.contains("active")) {
-//   q.parentNode.classList.toggle("active");
-// } else {
-//   quiz.forEach((q) => q.parentNode.classList.remove("active"));
-//   q.parentNode.classList.add("active");
-// }
+questions[0].click();
